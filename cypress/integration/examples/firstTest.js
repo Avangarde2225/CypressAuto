@@ -3,5 +3,7 @@ describe('My First Test', function() {
 
     
       cy.visit("https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Write-your-first-test");
+      cy.contains('Command Log').click()
+      
     })
   })
