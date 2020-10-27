@@ -4,8 +4,14 @@ describe('My First Test', function() {
     it('Does not do much!', function() {
 
     
-      cy.visit("https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Write-your-first-test");
-      cy.contains('Command Log').click()
+      cy.visit("https://www.rahulshettyacademy.com/seleniumPractise/#/")
+      cy.get(".search-keyword").type("ca")
+      cy.get(".product:visible").should("have.length",4)
+      cy.get(".products").find(".product").should("have.length",4)
+
+      cy.get(".products").find(".product").eq(2).contains("ADD TO CART")
+      cy.contains("ADD TO CART")
+
       
     })
   })
