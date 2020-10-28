@@ -11,6 +11,16 @@ describe('My First Test', function() {
 
       cy.get(".products").find(".product").eq(2).contains("ADD TO CART").click()
      // cy.contains("ADD TO CART")
+     cy.get(".products").find(".product").each(($e1, index, $list) => {
+
+      const tesxtVeg = $e1.find("h4.product-name").text()
+      if(tesxtVeg.includes("Cashews")){
+
+        $e1.find("button").click()
+      }
+     })
+
+
 
       
     })
