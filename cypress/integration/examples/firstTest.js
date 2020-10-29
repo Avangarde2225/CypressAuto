@@ -9,16 +9,22 @@ describe('My First Test', function() {
       cy.get(".product:visible").should("have.length",4)
       cy.get(".products").find(".product").should("have.length",4)
 
-      cy.get(".products").find(".product").eq(2).contains("ADD TO CART").click()
+      //cy.get(".products").find(".product").eq(2).contains("ADD TO CART").click()
      // cy.contains("ADD TO CART")
-     cy.get(".products").find(".product").each(($e1, index, $list) => {
+      cy.get(".products").find(".product").each(($e1, index, $list) => {
 
-      const tesxtVeg = $e1.find("h4.product-name").text()
-      if(tesxtVeg.includes("Cashews")){
+      const textVeg = $e1.find("h4.product-name").text()
+      if(textVeg.includes("Cashews")){
 
-        $e1.find("button").click()
+        $e1.find("button").trigger("click")
       }
      })
+     cy.get(".brand").then(function (logo) {
+
+      cy.log(logo.text())
+     })
+      
+
 
 
 
