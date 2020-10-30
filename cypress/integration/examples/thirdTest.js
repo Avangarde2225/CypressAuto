@@ -24,7 +24,12 @@ describe('My Third Test', function() {
     })
 
       cy.get("#autocomplete").should("have.value", "India")
-     
+
+      //visibile box
+
+      cy.get("#displayed-text").should("be.visible")
+      cy.get("#hide-textbox").click()
+      cy.get("#displayed-text").should("not.be.visible")     
     
     })
   })
