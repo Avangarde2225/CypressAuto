@@ -22,6 +22,14 @@ cy.on("window:confirm",(str) =>
 //preventing openning another tab
 cy.get("#opentab").invoke("removeAttr", "target").click()
 
+//verification of the url
+
+cy.url().should("include", "rahulshetty")
+
+//going back to original page
+
+cy.go("back")
+
 
   })
  
