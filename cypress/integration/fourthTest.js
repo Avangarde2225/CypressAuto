@@ -5,7 +5,9 @@ describe('My Fourth Test', function() {
 
     
       cy.visit("https://www.rahulshettyacademy.com/AutomationPractice/")
-      cy.get("")   
+      cy.get("#alertbtn").click()
+      cy.get("#confirmbtn").click()
+
     
     })
   })
