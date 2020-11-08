@@ -24,15 +24,27 @@ describe('Frames Test', function() {
       cy.get("input[name='name']:nth-child(2)").should("have.attr", "minlength", "2")
       cy.get("#inlineRadio3").should("be.disabled")
       cy.get(':nth-child(2) > .nav-link').click()
+      cy.get("h4.card-title").each(($e1, index, $list) => {
       
+        const text = $e1.text()
+        if(text.includes("Blackberry")){
+
+          cy.get('button.btn.btn-info').eq(index).click()
       
-        
-      })
-    
-      
+          
 
-
-
+          }
+  
+  
+        })
+  
+    })
+   
   })
+      
+
+
+
+    
  
 
