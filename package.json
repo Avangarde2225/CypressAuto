@@ -6,7 +6,7 @@
   "author": "Serdar",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^5.5.0",
+    "cypress": "^5.6.0",
     "cypress-iframe": "^1.0.1"
   },
   "scripts": {
