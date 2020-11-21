@@ -26,7 +26,7 @@ describe('Frames Test', function() {
       cy.get(':nth-child(2) > .nav-link').click()
       
       this.data.productName.forEach(function(element){
-console.select(element)
+        cy.select(element)
       
       });
       
