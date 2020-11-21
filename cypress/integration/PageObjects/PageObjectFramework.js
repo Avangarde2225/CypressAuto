@@ -2,6 +2,7 @@
 /// <reference types = "Cypress-iframe" />
 import 'cypress-iframe'
 import HomePage from './HomePage'
+import Products from './Products'
 
 describe('Frames Test', function() {
 
@@ -16,6 +17,8 @@ describe('Frames Test', function() {
     it('Demo exe', function() {
 
     const homePage = new HomePage()
+    const products = new Products()
+
       cy.visit("https://www.rahulshettyacademy.com/angularpractice/")
 
       homePage.getEditBox().type(this.data.name)
@@ -28,7 +31,7 @@ describe('Frames Test', function() {
       homePage.getEntrepreneur().should("be.disabled")
 
       homePage.getShopTab().click()
-      
+
       cy.get("h4.card-title").each(($e1, index, $list) => {
       
         const text = $e1.text()
