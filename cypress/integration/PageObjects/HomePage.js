@@ -2,7 +2,7 @@ class HomePage{
 
     getEditBox (){
 
-        cy.get('input[name = "name"]:nth-child(2)')
+       return cy.get('input[name = "name"]:nth-child(2)')
     }
 
     getTwoWayDataBindin(){
@@ -14,7 +14,7 @@ class HomePage{
         return cy.get('select')
     }
     getEntrepreneur(){
-        cy.get('#inlineradio3')
+       return cy.get('#inlineradio3')
     }
 
     getShopTab(){
