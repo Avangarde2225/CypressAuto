@@ -32,17 +32,12 @@ describe('Frames Test', function() {
 
       homePage.getShopTab().click()
 
-      cy.get("h4.card-title").each(($e1, index, $list) => {
+      this.data.productName.each(function(element)  {
       
-        const text = $e1.text()
-        if(text.includes("Blackberry")){
+        cy.select(element)
 
-          cy.get('button.btn.btn-info').eq(index).click()
-      
-          
-
-          }
-  
+          });
+  products.checkOutButton().click()
   
         })
   
