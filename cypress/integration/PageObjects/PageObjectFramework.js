@@ -32,11 +32,23 @@ describe('Frames Test', function() {
 
       homePage.getShopTab().click()
 
-      this.data.productName.forEach(function(element)  {
+      cy.get("h4.card-title").each(($e1, index, $list) => {
       
-        cy.select(element)
+        const text = $e1.text()
+        if(text.includes("Blackberry")){
 
-          });
+          cy.get('button.btn.btn-info').eq(index).click()
+      
+          
+
+          }
+        });
+
+     // this.data.productName.forEach(function(element)  {
+      
+       // cy.select(element).click()
+
+         // });
   products.checkOutButton().click()
   
         })
@@ -50,4 +62,4 @@ describe('Frames Test', function() {
 
     
  
-
+  
