@@ -32,7 +32,7 @@ describe('Frames Test', function() {
 
       homePage.getShopTab().click()
 
-      this.data.productName.each(function(element)  {
+      this.data.productName.forEach(function(element)  {
       
         cy.select(element)
 
@@ -43,7 +43,7 @@ describe('Frames Test', function() {
   
     })
    
-  })
+  
       
 
 

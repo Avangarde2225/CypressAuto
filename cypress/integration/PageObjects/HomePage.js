@@ -14,7 +14,7 @@ class HomePage{
         return cy.get('select')
     }
     getEntrepreneur(){
-       return cy.get('#inlineradio3')
+       return cy.get('#inlineRadio3')
     }
 
     getShopTab(){
