@@ -30,6 +30,7 @@ describe('Frames Test', function() {
         if(text.includes("Blackberry")){
 
           cy.get('button.btn.btn-info').eq(index).click()
+         
       
           
 

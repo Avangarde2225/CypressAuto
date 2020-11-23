@@ -53,6 +53,14 @@ describe('Frames Test', function() {
   cy.contains("Checkout").click()
   cy.get('#country').type("United States of America")
   cy.get(".suggestions > ul > li > a").click()
+  cy.get("#checkbox2").click({force:true})
+  cy.get('input[type="submit"]').click()
+  //cy.get(".alert").should("have.text","Success! Thank you! Your order will be delivered in next few weeks :-).")
+  
+  cy.get(".alert").then(function(element){
+
+    const actualText = element.text()
+     expect(actualText.includes("Success")).to.be.true
   
   
         })
@@ -66,4 +74,4 @@ describe('Frames Test', function() {
 
     
  
-  
+})
