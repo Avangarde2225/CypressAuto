@@ -50,6 +50,10 @@ describe('Frames Test', function() {
 
          // });
   products.checkOutButton().click()
+  cy.contains("Checkout").click()
+  cy.get('#country').type("United States of America")
+  cy.get(".suggestions > ul > li > a").click()
+  
   
         })
   
