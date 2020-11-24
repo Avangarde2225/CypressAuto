@@ -50,6 +50,12 @@ describe('Frames Test', function() {
 
          // });
   products.checkOutButton().click()
+
+  cy.get("tr td:nth-child(4) strong").each(($e1, index, $list) => {
+
+cy.log($e1.text())
+  })
+
   cy.contains("Checkout").click()
   cy.get('#country').type("United States of America")
   cy.get(".suggestions > ul > li > a").click()
